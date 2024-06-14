@@ -15,9 +15,11 @@ public class User {
     private String username;
     private String password;
     private String phone;
-    private boolean isNotification;
+    private String nickName;
+    private String email;
     @Enumerated(EnumType.STRING)
     private Authority authority;
+    private boolean isNotification;
 
 
     @Builder
