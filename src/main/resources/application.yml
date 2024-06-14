@@ -7,17 +7,17 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}
-    username: ${DATABASE_USER}
-    password: ${DATABASE_PASSWORD}
+    url: jdbc:mysql://${DATABASE_HOST:127.0.0.1}:${DATABASE_PORT:3306}/${DATABASE_NAME:whenbrella?serverTimezone\=UTC&characterEncoding\=utf8}
+    username: ${DATABASE_USER:root}
+    password: ${DATABASE_PASSWORD:qwer}
 
 
 app:
   token:
     access:
-      secret-key: ${JWT_SECRET_KEY_ACCESS}
-      expiration: ${JWT_EXPIRATION_ACCESS}
+      secret-key: ${JWT_SECRET_KEY_ACCESS:asdfO45TFY45kGU44545TFY45kG345TFY45kG5kGU44545TA4}
+      expiration: ${JWT_EXPIRATION_ACCESS:3600}
     refresh:
-      secret-key: ${JWT_SECRET_KEY_REFRESH}
-      expiration: ${JWT_EXPIRATION_REFRESH}
+      secret-key: ${JWT_SECRET_KEY_REFRESH:asdfO45TFY45kGU44545TFY45kG345TFY45kG5kGU44545TA4}
+      expiration: ${JWT_EXPIRATION_REFRESH:86400}
   allow-origins: http://localhost:3000
